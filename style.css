@@ -23,6 +23,7 @@ body {
     text-transform: lowercase;
     margin-bottom: 20px;
     cursor:pointer;
+    font-family: sans-serif;
 }
 .stopwatch-display:hover {
     background: #6b0000;

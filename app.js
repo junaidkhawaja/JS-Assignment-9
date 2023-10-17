@@ -1,7 +1,7 @@
 // Stopwatch
-var milliseconds = 0; // adding milliseconds as 0
-var seconds = 0; // adding seconds as 0
-var minutes = 0; // adding minutes as 0
+var milliseconds = 00; // adding milliseconds as 0
+var seconds = 00; // adding seconds as 0
+var minutes = 00; // adding minutes as 0
 var watchDisplay = document.querySelector('.stopwatch-display'); // capturing the stopwatch display
 var interval; // setting interval variable as empty/null
 
@@ -9,14 +9,19 @@ var interval; // setting interval variable as empty/null
 function displayTimer(){
     milliseconds+=1; // adding milliseconds with 100 increments
     if(milliseconds == 10){ // if milliseconds reach 1000, make them 0 and increment a number in seconds
-        milliseconds = 0;
+        milliseconds = 00;
         seconds++;
     }
     if(seconds == 60){ // if seconds reach 60, make them 0 and increment a number in minutes
-            seconds = 0;
+            seconds = 00;
             minutes++;
     }
-    watchDisplay.innerHTML = ` ${minutes}m : ${seconds}s : ${milliseconds}ms`; // using literal to add the values
+    var minutesDbl = String(minutes).padStart(2, '0'); // these two new built-in function used to show the values with double numbers
+    var secondsDbl = String(seconds).padStart(2, '0'); // these two new built-in function used to show the values with double numbers
+    var millisecondsDbl = String(milliseconds).padStart(2, '0'); // these two new built-in function used to show the values with double numbers
+
+
+    watchDisplay.innerHTML = ` ${minutesDbl}m : ${secondsDbl}s : ${millisecondsDbl}ms`; // using literal to add the values
 }
 
 
@@ -34,9 +39,9 @@ function pause() { // on this function we pause the interval
 
 function reset() {// on this function we pause the interval but also make the values 0
     pause();
-    milliseconds = 0;
-    seconds = 0;
-    minutes = 0;
+    milliseconds = 00;
+    seconds = 00;
+    minutes = 00;
     watchDisplay.innerHTML = '00m : 00s : 00ms ';
 }
 
