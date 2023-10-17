@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch & Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Stopwatch & Countdown Timer</h1>
+
+    <h2>Stopwatch</h2>
+    <div class="container">
+        <div class="stopwatch-display">
+            00m : 00s : 00ms
+        </div>
+        <div class="buttons">
+            <button onclick="start();">Start</button>
+            <button onclick="pause();">Pause</button>
+            <button onclick="reset();">Reset</button>
+        </div>
+    </div>
+<br />
+    <h2>Countdown Timer</h2>
+    <select id="selectDuration">
+    <option disabled readonly selected> -- Select Duration --</option>
+    <option value="300">5 Minutes</option>
+    <option value="600">10 Minutes</option>
+    <option value="900">15 Minutes</option>
+    <option value="1200">20 Minutes</option>
+    <option value="1500">25 Minutes</option>
+    <option value="1800">30 Minutes</option>
+    </select>
+    <div id="timer">00:00</div>
+    <button onclick="startButton()">Start</button>
+    <button  onclick="stopButton()">Stop</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
